@@ -7,6 +7,12 @@ Los enunciados de los ejercicios creo que deberíamos ponerlos en negrita ( \\te
 
 Se puede cambiar la plantilla, siempre y cuando compile. Por favor, comprobad todos los errores antes de hacer push.
 
+## Compilar
+Si teneis pdflatex instalado, podeis compilar con
+```shell
+make
+```
+## Añadir ejercicios
 Para identificar los commits podemos indicar expresamente el ejercicio que hemos modificado
 
 git commit -m "Relación x.x ejercicio x"
