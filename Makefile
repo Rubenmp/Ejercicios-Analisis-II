@@ -1,0 +1,3 @@
+all: ejercicios.pdf
+	pdflatex -shell-escape -interaction=nonstopmode -file-line-error ejercicios.tex
+	./limpieza.sh
