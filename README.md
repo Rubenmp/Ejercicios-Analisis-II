@@ -10,3 +10,6 @@ Se puede cambiar la plantilla, siempre y cuando compile. Por favor, comprobad to
 Para identificar los commits podemos indicar expresamente el ejercicio que hemos modificado
 
 git commit -m "Relación x.x ejercicio x"
+
+Si el ejercicio no está corregido por el profesor sugiero poner un % (\%) antes del número.
+Ej: %5. Probad ...
