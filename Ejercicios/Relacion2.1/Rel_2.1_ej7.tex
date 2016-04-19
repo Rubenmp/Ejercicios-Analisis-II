@@ -1,1 +1,36 @@
+
+\textbf{7. Existencia de conjuntos no medibles}
+
+\begin{enumerate}[label=\alph*)]
+	\item Probar que la familia $\{x + \mathbb Q : x \in \mathbb R \}$ es una partición de $\mathbb R$. \\
+	
+	Sea $x \in \mathbb R$. Entonces $x \in x+\mathbb Q$ dado que $x = x + 0$. Por ello, $\displaystyle \bigcup_{x \in \mathbb R} \{x+\mathbb Q\} = \mathbb R$.
+	
+	Sean $x,y,t \in \mathbb R : t \in x+\mathbb Q$ y $t \in y + \mathbb Q$. Entonces $\exists q_1, q_2 \in \mathbb Q : t = x + q_1 = y + q_2$. Así, $x = y + q_2 - q_1$, y, como $q_2 - q_1 \in \mathbb Q$, $x \in y + \mathbb Q$ y $x + \mathbb Q = y + \mathbb Q$.
+	
+	Así, esta familia está formada por conjuntos disjuntos (si un elemento está en dos elementos de la familia, estos son el mismo) cuya unión es $\mathbb R$: es una partición de $\mathbb R$.
+	
+	\item Pongamos $\{x+\mathbb Q : x \in \mathbb R\} = \{A_i : i \in I\} \ (A_i \ne A_j$ para $i \ne j)$ y, para cada $i \in I$, sea $x_i \in A_i \ \cap \ ]0, 1]$. Probar que el conjunto $E = \{x_i : i \in I\}$ no es medible. \\
+	
+	Sea $\{q_n : n \in \mathbb N\}$ una numeración de $]-1, 1] \cap \mathbb Q$.
+	
+	Supongamos que $E$ es medible. En tal caso, $\lambda(E) = \lambda(E+k) \ \forall k \in \mathbb R$ dado que $\lambda$ es invariante por traslación. Debido a la $\sigma$-aditividad de $\lambda$ y a que los conjuntos $q_n + E$ son disjuntos entre sí [proof needed], resulta que:
+	
+	$$\lambda(\bigcup_{n = 1}^{+\infty} (q_n + E)) = \sum_{n=1}^{+\infty}\lambda(q_n + E) = \sum_{n=1}^{+\infty} \lambda(E)$$
+	
+	Como $\displaystyle ]0, 1] \subseteq \bigcup_{n=1}^{+\infty} (q_n + E) \subseteq \ ]-1, 2]$ [proof needed], también tendremos que $\displaystyle \lambda(]0, 1]) = 1 \le \lambda(\bigcup_{n=1}^{+\infty} (q_n + E)) = \sum_{n=1}^{+\infty} \lambda(E) \le \lambda(]-1, 2]) = 3$. Como esto es imposible tanto si $\lambda(E) = 0$ (en cuyo caso $\displaystyle \sum_{n=1}^{+\infty} \lambda(E) = 0 \ngeq 1$) como si $\lambda(E) \in \mathbb R^+$ (en cuyo caso $\displaystyle \sum_{n=1}^{+\infty} \lambda(E) = +\infty \nleq 3$), la suposición de que $E$ es medible resulta haber sido incorrecta, y $E$ no es medible.
+	
+	\item Probar que cualquier subconjunto medible de $E$ tiene medida cero. \\
+	
+	Los conjuntos $q_n + A$ son, de nuevo, disjuntos. Por ello, vuelve a ocurrir que $\displaystyle \lambda(\bigcup_{n = 1}^{+\infty} (q_n + A)) = \sum_{n=1}^{+\infty} \lambda(A)$. De nuevo, $\displaystyle \bigcup_{n=1}^{+\infty} (q_n + A) \subseteq \ ]-1, 2]$ y por ello $\displaystyle \sum_{n=1}^{+\infty} \lambda(A) \le \lambda(]-1, 2]) = 3$. La única posibilidad es que $\lambda(A) = 0$.
+	
+	\item Sea $M \subseteq \mathbb R$ con $\lambda^*(M) > 0$. Probar que $M$ contiene un subconjunto no medible.
+	
+	Si $M$ no es medible, el enunciado es trivial ($M$ sería un subconjunto no medible de $M$). Sea $M$ medible, es decir, $\lambda(M) = \lambda^*(M)$. Se observa que $\displaystyle M = \bigcup_{q \in \mathbb Q} M \cap (q + E)$ [proof needed].
+	
+	Supongamos que $M\cap (q + E)$ es medible para todo $q \in \mathbb Q$. En ese caso: (aparece un $\le$ porque la unión no es disjunta)
+	$$\displaystyle \lambda(M) = \lambda(\bigcup_{q \in \mathbb Q} M \cap (q + E)) \le \sum_{q \in \mathbb Q} \lambda(M \cap (q+E))  = \sum_{q \in \mathbb Q} \lambda((M-q) \cap E)$$
+	
+	Que es igual a $0$ por ser la suma de las medidas de subconjuntos de $E$ medibles (porque suponemos que todos son medibles), las cuales son $0$ por lo probado en $c)$. Contradicción (hemos obtenido que $\lambda(M) \le 0$), por lo cual alguno de los $M\cap (q + E)$ no será medible.
+\end{enumerate}
  
