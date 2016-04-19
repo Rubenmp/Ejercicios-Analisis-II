@@ -1,3 +1,5 @@
+$Relación de ejercicios resueltos de Análisis Matemático II$
+
 Modificad solamente el ejercicio indicado "./Ejercicios/Rel../\*.tex" para minimizar los solapamientos
 
 Sería interesante ponernos de acuerdo en un formato más o menos homogéneo al hacer los ejercicios.
