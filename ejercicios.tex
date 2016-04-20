@@ -24,7 +24,6 @@
 \definecolor{gray45}{gray}{.45}
 
 \usepackage[hidelinks]{hyperref}  % Enlaces
-\usepackage{multirow} % Tablas
 
 \usepackage{listings} % Escribir código en diferentes lenguajes de programación
 \usepackage{longtable} % para tablas largas
@@ -58,6 +57,10 @@ breaklines=true,
 \author{ }
 \date{\today}
 
+% Comandos
+\newcommand{\enunciado}[1]{\vspace{0.75cm} \textbf{#1}}
+
+
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
 %					 Inicio del documento
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
@@ -68,6 +71,8 @@ breaklines=true,
 \tableofcontents % Generando el indice
 \newpage
 \setlength\parindent{0pt} % Quitamos la sangría
+
+
 
 
 \section{Sucesiones de funciones}
