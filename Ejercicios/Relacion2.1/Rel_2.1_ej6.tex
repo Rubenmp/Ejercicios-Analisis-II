@@ -1,1 +1,21 @@
- 
+\enunciado{Probar que la uni\'on numerable de conjuntos de medida nula es un conjunto de medida nula.
+          Ded\'uzcase que $\mathbb{N}$ y $\mathbb{Q}$ son dos conjuntos de medida nula.}\\
+
+  Sea $\mu(A_i)=0 \ \forall i \in \mathbb{N}$. Entonces, por la $\sigma$-aditividad, \
+  $\mu(\bigcup_{n=1}^{\infty} A_n) = \sum_{n=1}^{\infty} \mu(A_n) = 0$.\\
+
+  Probemos ahora que $\mathbb{N}$ es un conjunto de medida nula.
+  Para ello, demostraremos en primer lugar que
+  $\mu(\lbrace n \rbrace) = 0 \ \forall n \in \mathbb{N}$.
+  Definimos $A_k = [n - \frac{1}{k}, n + \frac{1}{k}]$.
+  Por tanto, $\mu(\bigcap_{n \in \mathbb{N}} A_k) = \lim_k\mu(A_k) = \lim_k\frac{2}{k} = 0$.
+  Demostramos as\'i que
+  $\mu(\mathbb{N}) = \mu(\bigcup_{n \in \mathbb{N}} \lbrace n \rbrace)
+  = \sum_{n=1}^{\infty} \mu(\lbrace n \rbrace) = 0$.\\
+
+  La prueba para $\mathbb{Q}$ es muy parecida.
+  Como $\mathbb{Q}$ es numerable, podemos definir una sucesi\'on $\lbrace q_n \rbrace$ tal que
+  $q_n \in \mathbb{Q} \ \forall n \in \mathbb{N}$ y
+  $\bigcup_{n \in \mathbb{N}} \lbrace q_n \rbrace = \mathbb{Q}$. Por tanto,
+  $\mu(\mathbb{Q}) = \mu(\bigcup_{n \in \mathbb{N}} \lbrace q_n \rbrace)
+  = \sum_{n=1}^{\infty} \mu(\lbrace q_n \rbrace) = 0$.
