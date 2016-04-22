@@ -1,1 +1,12 @@
- 
+ \enunciado{Sea $\mu^*$ una medida exterior en un conjunto no vacío $\Omega$. Probar que la restricci\'on de $\mu^*$ a la $\sigma$  -álgebra $ C_{\Omega, \mu^*}$ es una medida completa ( esto es, todo subconjunto B de un conjunto $Z \in   C_{\Omega, \mu^*}$ tal que $ \mu^* (Z) = 0$ es también un conjunto de la propia $\sigma$ -álgebra)}
+
+Sea Z un conjunto tal que $\mu^* (Z) = 0 $ y $B \subseteq Z$ , entonces , B ser\'a  medible si y solo si 
+
+\[\forall A \subseteq \Omega , \mu^* (A) = \mu^* (A\cap B) + \mu^* (A \cap  B^c).\]
+
+Para probarlo partimos de la desigualdad que nos da la subaditividad de una medida exterior, es decir:
+\[A \subseteq \Omega \; \mu^* (A) \leq \mu^* (A \cap B) + \mu^* (A\cap B^c)\]
+Si además usamos que\: 
+\[A \cap B \subseteq A \cap  B \subseteq Z \Rightarrow  \mu^* (A \cap  B) = 0\]
+ entonces obtenemos 
+\[A \subseteq \Omega \; \mu^* (A) \leq \mu^* (A \cap  B) + \mu^* (A\cap B^c) \leq  \mu^* (A)\] como queríamos demostrar. 
