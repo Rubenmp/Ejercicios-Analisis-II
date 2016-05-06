@@ -1,1 +1,15 @@
- 
+\enunciado{Sean $A$ un abierto de $\mathbb{R}^N$ y $f:A \rightarrow \mathbb{R}^M$ una función de clase $C^1$ con $N<M$. Probar que $f(A)$ es de medida cero.}
+
+Sea $G$ un abierto de $\mathbb{R}^N$ y sea $f \in C^1(G)$
+
+1. Si $Z \subseteq G(=B \supseteq Ax\{0\})$, $\lambda (Z) = 0$, entonces $\lambda (f(Z)) = 0$
+
+Definimos $B := A x \mathbb{R}^{M-N} \subseteq \mathbb{R}^M$ y $g: B \rightarrow \mathbb{R}^M$ por
+\[ g(x,y) = f(x) \ \forall (x,y)\in B\]
+El conjunto $B$ es un abierto de $\mathbb{R}^M$ y $g\in C^1(B)$
+
+El conjunto $Ax\{0\} \subset B$ es de medida cero en $\mathbb{R}^M$ por estar contenido en un hiperplano.
+
+\[\lambda(Ax\{0\}) = \lambda (A) \cdot \lambda (0) = 0\]
+
+Aplicando la proposición anterior $\lambda( g(A,\{0\}) ) = 0 \implies \lambda (f(A)) = 0$

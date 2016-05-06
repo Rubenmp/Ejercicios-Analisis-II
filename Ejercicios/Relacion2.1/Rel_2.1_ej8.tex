@@ -1,1 +1,23 @@
+\enunciado{Probar que la existencia de conjuntos no medibles equivale a la no aditividad de $\lambda^*$.}
+
  
+Sabemos que $E\in M \Longleftrightarrow E \in C_{\mathbb{R}, \lambda^*}$
+
+Queremos probar:
+$E \in M \ no \ medible \Longleftrightarrow \lambda^*(A) \geq \lambda^*(A\cap E) + \lambda^*(A \cap E^c) \ \forall A\subset \mathbb{R}^N$
+
+$\Longrightarrow$
+
+Si $E \in \mathbb{R}^N no es medible$, entonces existe $A\subseteq \mathbb{R}^N$ tal que 
+\[\lambda^*( (A\cap E) \cup (A\cap E^c) ) = \lambda^*(A) < \lambda^*(A\cap E) + \lambda^*(A\cap E^c)\]
+y $\lambda^*$ no es aditiva.
+
+$\Longleftarrow$
+
+Supongamos que $\lambda^*$ no es aditiva. Sean $A,B\subseteq \mathbb{R}^N, \ A\cap B = \varnothing$ tales que
+
+\[\lambda^*(A\cup B) < \lambda^*(A) + \lambda^*(B)\]
+
+Se tiene que
+\[ \lambda^*(A\cup B) < \lambda^*( (A\cup B)\cap A ) + \lambda^*( (A\cup B)\cap A^c )\]
+y el conjunto $A$ no es medible.

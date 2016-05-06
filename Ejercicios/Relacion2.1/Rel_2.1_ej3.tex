@@ -1,1 +1,28 @@
- 
+\enunciado{Sea $(\Omega ,\mathcal{A})$ un espacio medible y sea $\Omega '$ un nuevo conjunto. Sea $f: \Omega \longrightarrow \Omega '$ una aplicación. Probar que $( \Omega ', \{ B\in\Omega ':\ f^{-1}(B)\in \mathcal{A} \} )$ es un espacio medible.}
+
+Definimos $\mathcal{A}'=\{ B\in\Omega ':\ f^{-1}(B)\in \mathcal{A} \}$, debemos demostrar que es $\sigma$-álgebra.
+
+\textit{i)}
+$\Omega ' \in \mathcal{A}'$:
+
+$f^{-1}(\Omega ') = \Omega\in\mathcal{A}$ por ser $\mathcal{A}$ $\sigma$-álgebra.
+
+\textit{ii)}
+Si $\{A_n\}$ es una sucesión de elementos de $\mathcal{A}'$, entonces $\left( \bigcup_{n\in\mathbb{N}}A_n \right) \in \mathcal{A}'$:
+
+Si $A_i\in \mathcal{A}' \ \forall       
+ i\in\mathbb{N} \implies$
+$\forall i\in\mathbb{N} A_i\subseteq\Omega '\ : \left( f^{-1}(A_i)\right) \in \mathcal{A}$
+
+\[ \bigcup_{n \in \mathbb{N} }f^{-1}(A_n) \in \mathcal{A} \ por \ ser \ \sigma -álgebra\] 
+
+\textit{iii)}
+Si $A\in\mathcal{A}'$ entonces $A^c=\Omega '\setminus A \in \mathcal{A}'$:
+
+Si $A\in \mathcal{A}' \implies f^{-1}(A)\in \mathcal{A}$
+
+\[f^{-1}(A^c) = f^{-1}(\Omega'\setminus A) = f^{-1}(\Omega') - f^{-1}(A) = \Omega - f^{-1}(A) \]
+
+Por ser $\Omega , f^{-1}(A)\in \mathcal{A} \implies f^{-1}(A^c)\in \mathcal{A}$ por ser $\sigma$-álgebra. Por tanto $A^c\in \mathcal{A}$
+
+$\Longrightarrow (\Omega', \mathcal{A}')$ es un espacio medible. 
