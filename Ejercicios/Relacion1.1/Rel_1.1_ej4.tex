@@ -1,1 +1,55 @@
+\begin{ejercicio}{%
+Para cada $n \in \N$, sea $f_n:]0,\pi[ \to \R$ la función dada por:
+\[f_n(x) = \frac{\sin^2(nx)}{n\sin(x)} \quad (0 < x < \pi)\]
+Estudia la convergencia puntual de la sucesión puntual $\{f_n\}$ así como la
+convergencia uniforme en intervalos del tipo $]0,a], [a,\pi[$ y $[a,b]$ donde $0 < a< b < \pi$.
+}{Pablo Baeyens}
+
+\espacio
+
+\noindent\textbf{$\{f_n\}$  converge puntualmente a 0}
+
+Sea $x \in (0,\pi)$. Para todo $n \in \N$ tenemos:
+\[ 0 \leq \frac{\sin^2(nx)}{n\sin(x)} \leq \frac{1}{n\sin(x)} \]
+Por tanto, como $\{\frac{1}{n\sin(x)}\} \to 0$, por el teorema del sándwich, la
+sucesión converge a 0.
+
+\espacio
+
+\noindent\textbf{La sucesión no converge uniformemente en intervalos de la forma $(0,a]$}
+
+La convergencia uniforme es equivalente a que para cualquier sucesión $\{a_n\}$:
+
+\[\{f_n(a_n) -f(a_n)\} = \left\{\frac{\sin^2(na_n)}{n\sin(a_n)}\right\} \to 0\]
+
+Sea $a_n = \frac{1}{n}$:
+
+\[ \left\{\frac{\sin^2(na_n)}{n\sin(a_n)}\right\}  =
+\left\{\frac{\sin^2(1)}{\frac{\sin(\frac{1}{n})}{\frac{1}{n}}}\right\} \to \sin^2(1) \neq 0 \]
+
+\espacio
+
+\noindent\textbf{La sucesión no converge uniformemente en intervalos de la forma $[a,\pi)$}
+
+Sea $a_n = \pi - \frac{1}{n}$:
+
+\[ \left\{\frac{\sin^2(na_n)}{n\sin(a_n)}\right\}  =
+\left\{\frac{\sin^2(n\pi -1)}{\frac{\sin(\pi -\frac{1}{n})}{\frac{1}{n}}}\right\} =
+\left\{\frac{\sin^2(1)}{\frac{\sin(\frac{1}{n})}{\frac{1}{n}}}\right\} \to \sin^2(1) \neq 0 \]
+
+Ya que $\sin(x) = \sin(\pi-x)$.
+
+\espacio
+
+\noindent\textbf{La sucesión converge uniformemente en intervalos de la forma $[a,b]$}
+
+Por el teorema de Weierstrass
+$\exists M >0: \forall x \in [a,b]: \left|\frac{1}{\sin(x)}\right| \leq M$. Por tanto:
+
+\[ \left|\frac{\sin^2(nx)}{n\sin(x)}\right| \leq \frac{M}{n} \]
+
+Como $\{\frac{M}{n}\} \to 0$, la sucesión converge uniformemente en intervalos
+de la forma $[a,b]$.
+
+\end{ejercicio}
  

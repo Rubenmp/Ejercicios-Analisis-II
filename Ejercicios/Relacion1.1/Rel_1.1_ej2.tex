@@ -1,1 +1,31 @@
- 
+\enunciado{Dado $\alpha \in \R$, consideremos la sucesión de funciones $\{f_n\}$, donde $\{f_n\}:[0,1] \longleftrightarrow \R$ es la función definida para todo $x\in[0,1]$ por:
+$$f_n(x) = n^\alpha x(1-x^2)^n$$} 
+
+El conjunto en el que tenemos que estudiar las funciones es el $[0,1]$, y las funciones son:
+
+$$f_n(x) = n^\alpha x(1-x^2)^n$$ 
+$$f_n'(x) = n^\alpha(1-x^2)^n - 2n^{\alpha+1}x^2(1-x^2)^{n-1} = n^\alpha(1-x^2)^{n-1}(1-x^2(1+2n))$$
+
+Tenemos que $f_n'(x) = 0 \iff x=\left\{
+\begin{array}{l}
+1, \\
+\frac{1}{\sqrt{2n+1}}
+\end{array}\right.$
+
+Vemos rápidamente que $f_n'(0) > 0$ por lo que las funciones son crecientes en la primera parte, llegan hasta $\frac{1}{\sqrt{2n+1}}$ y luego debe de bajar (porque $f_n(0) = f_n(1) = 0$), así que vamos a definir nuestra sucesión de máximos como $x_n = f_n\left(\frac{1}{\sqrt{2n+1}}\right)$. La estudiamos:
+
+$$x_n = \frac{n^\alpha*(2n)^n}{(2n+1)^{n+\frac{1}{2}}} =  \frac{n^{n+\alpha}}{\sqrt 2(n+\frac{1}{2})^{n+\frac{1}{2}}} = \frac{1}{\sqrt 2}\frac{n^\alpha}{(n+\frac{1}{2})^{\frac{1}{2}}}\left(\frac{n}{n+\frac{1}{2}}\right)^n$$
+
+La fracción de la derecha es equivalente a $e^{n\cdot ln\left(\frac{n}{n+\frac{1}{2}}\right)}$. Esto tiende a $\frac{1}{\sqrt e}$ cuando $n$ tiende a infinito. Usando que solo tenemos que estudiar este límite:
+
+$$\lim\limits_{n->\infty} n\cdot ln\left(\frac{n}{n+\frac{1}{2}}\right)$$
+
+Para hallar el límite estudiamos la siguiente función y aplicamos L'Hôpital:
+
+$$g(x) = \frac{ln\left(\frac{n}{n+{\frac{1}{2}}}\right)}{\frac{1}{n}} = \frac{ln(n)-ln(n+1/2)}{\frac{1}{n}}$$
+
+
+
+Sabiendo que la fracción de la derecha converge a $\frac{1}{\sqrt e}$ (habiendo hecho L'Hôpital arriba) y la fracción de la izquierda converge también, solo nos queda mirar la de en medio. Si $\alpha < 1/2$, esa sucesión converge a 0. Si $\alpha > 1/2$ esa sucesión diverge, y en el caso de $\alpha = 1/2$ esa sucesión converge a 1. Nos queda en total que ${x_n}$ converge a 0 $\iff \alpha < 1/2$. Por lo que hay convergencia uniforme solo en ese caso.
+
+Para el caso en el que tenemos el conjunto $[\rho, 1]$ para algún $\rho > 1$, esta vez la funcion $f_n$ será decreciente en todo el intervalo a partir de un determinado $n$ (ya que el punto donde se alcanzaba el máximo antes se acerca a 0 conforme $n$ se va agrandando). Por lo que esta vez, a partir de ese $n_0$ con el que las $f_n$ con $n>n_0$ son decrecientes podemos coger la sucesión de máximos $x_n = f_n(\rho)$. Pero de nuevo, si hemos hecho la convergencia puntual, esta sucesión converge a 0, por lo que hay convergencia uniforme en este intervalo.

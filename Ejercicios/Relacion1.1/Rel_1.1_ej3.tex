@@ -1,1 +1,29 @@
+\enunciado{Para cada $n\in\N$, sea $f_n:[0,\pi /2] \longleftrightarrow \R$ la función dada por: $$f_n(x) = n(cos(x))^nsen(x)$$}
+
+El intervalo en el que nos piden la convergencia uniforme en el $[0, a]$ y en el $[a, \pi/2]$ de las siguientes funciones:
+
+$$f_n(x) = n(cos(x))^nsen(x) \hspace{2cm} f_n'(x) = -n^2(cos(x))^{n-1}(sen(x))^2 + n(cos(x))^{n+1}$$
+
+Sabemos que $cos(x) = 0 \iff x = \pi/2$ teniendo en cuenta que $x\in [0, \pi/2]$, momento en el que la derivada se hace cero. Si suponemos $cos(x) \neq 0$ podemos deducir que entonces $f_n'(x) = 0 \iff n(sen(x))^2 = cos(x)^2 \iff (tan(x))^2 = \frac{1}{n} \iff x = arctan\left(\frac{1}{\sqrt n}\right)$. Podemos notar que este x se va acercando cada vez más a 0 conforme avanza $n$. Este punto es un máximo de $f_n$ que podemos deducir de que $f_n'(0) > 0$ y $f_n'(\pi/4) < 0$ para todo $ n > 1$.
+
+Definimos entonces nuestra sucesión de máximos de la función:
+
+$$\{x_n\} = f_n\left(arctan\left(\frac{1}{\sqrt n}\right)\right) = n\left(cos\left(arctan\left(\frac{1}{\sqrt n}\right)\right)\right)^nsen\left(arctan\left(\frac{1}{\sqrt n}\right)\right)$$
+
+Como podéis ver, esta sucesión es larguísima y no tiene pinta de tener una forma fácil de mejorarla, así que nos pasamos a alguna otra sucesión que siga los pasos de esta (esto solo nos vale si queremos buscar que es falsa la convergencia uniforme, que en este caso lo es para el conjunto $[0,a]$). Necesitamos una decreciente y que converja a 0, así que probamos con $y_n = f_n\left(\frac{1}{n}\right)$.
+
+$$y_n = n\left(cos\left(\frac{1}{n}\right)\right)^nsen\left(\frac{1}{n}\right)$$
+
+Sabemos que $\frac{sen(x)}{x}$ converge a 1 cuando x tiende a 0, que es el caso de $n\cdot sen\left(\frac{1}{n}\right)$. Nos quedaría $cos^n\left(\frac{1}{n}\right)$:
+
+$$\lim\limits_{n->\infty} cos^n\left(\frac{1}{n}\right) = e^{\lim\limits_{n->\infty}n\cdot ln\left(cos\left(\frac{1}{n}\right)\right)}$$
+
+Por L'Hôpital podemos sacar que el límite en el exponente es 0 (sale fácil si hacéis L'Hôpital en el $\lim\limits_{x->0}\frac{ln(cos(x))}{x}$ ), por lo que todo tiende a $e^0 = 1$, y por lo tanto, como la parte de $n\cdot sen\left(\frac{1}{n}\right)$ también converge a 1, podemos deducir que $y_n$ converge a 1. Hemos encontrado una sucesión de reales tales que $\{f_n(a_n)-f(n)\}$ no converge a 0, por lo que no hay convergencia uniforme en el $[0,a]$.
+
+En el caso $[a, \pi/2]$ podemos cogernos la sucesión de números $x_n = f_n(a)$. Si bien antes no nos ha servido de nada el estudio del máximo, sí que podemos usar ahora que sabemos que existe un $n_0$ a partir del cual las funciones $f_n$ son decrecientes en el intervalo $[a, \pi/2]$ para todo $n>n_0$.
+
+$$x_n = n(cos(a))^nsen(a)$$
+
+Mismo razonamiento que en todos los ejercicios anteriores. Si hemos razonado ya que la convergencia puntual se da en todos los puntos del intervalo $[0, \pi/2]$, en concreto se da en $a$, por lo que $\{x_n\}$ converge a 0, y podemos deducir entonces que en este intervalo hay convergencia uniforme, usando el tercer punto que explicamos justo antes de los ejercicios.
+
  

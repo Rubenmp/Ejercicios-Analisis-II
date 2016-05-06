@@ -15,10 +15,14 @@
 \usepackage{multirow} % Tablas
 \usepackage{multicol}
 \usepackage{enumitem} % Enumerados a), b), c)... usando \begin{enumerate}[label=\alph*)]
+\usepackage{xparse}
+\usepackage[usenames]{color}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{accents}
+\usepackage{dsfont}
+
 
 \usepackage{graphicx} % Inserción de imágenes
-\usepackage{xcolor} % Colores
-\usepackage{color}
 \definecolor{gray97}{gray}{.97}
 \definecolor{gray75}{gray}{.75}
 \definecolor{gray45}{gray}{.45}
@@ -27,31 +31,6 @@
 
 \usepackage{listings} % Escribir código en diferentes lenguajes de programación
 \usepackage{longtable} % para tablas largas
-\lstset{ frame=Ltb,
-framerule=0pt,
-aboveskip=0.5cm,
-framextopmargin=3pt,
-framexbottommargin=3pt,
-framexleftmargin=0.4cm,
-framesep=0pt,
-rulesep=.4pt,
-backgroundcolor=\color{gray97},
-rulesepcolor=\color{black},
-%
-stringstyle=\ttfamily,
-showstringspaces = false,
-basicstyle=\small\ttfamily,
-commentstyle=\color{gray45},
-keywordstyle=\bfseries,
-%
-numbers=left,
-numbersep=15pt,
-numberstyle=\tiny,
-numberfirstline = false,
-breaklines=true,
-}
-
-
 
 \title{Ejercicios de Análisis Matemático II}
 \author{ }
@@ -62,6 +41,10 @@ breaklines=true,
 \newcommand{\revisado}[0]{ \includegraphics[width=0.04\textwidth]{./Imagenes/tick.jpeg}}
 \newcommand{\enconstruccion}[0]{ \includegraphics[width=0.04\textwidth]{./Imagenes/construccion.png}}
 \newcommand{\sinrevisar}[0]{ \includegraphics[width=0.055\textwidth]{./Imagenes/lupa.jpg}}
+\newcommand{\espacio}{\vspace*{\baselineskip}}  % Añade espacios
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\NewDocumentEnvironment{ejercicio}{mm}{\espacio\textbf{#1}\espacio}{\hfill\small{Hecho por \textit{#2}}}
 
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
@@ -77,14 +60,16 @@ breaklines=true,
 
 \section{Sucesiones de funciones}
 \subsection{Sucesiones de funciones}
-	%\subsubsection{Ejercicio 1}
-	%\input{./Ejercicios/Relacion1.1/Rel_1.1_ej1.tex}
-	%\subsubsection{Ejercicio 2}
-	%\input{./Ejercicios/Relacion1.1/Rel_1.1_ej2.tex}
-	%\subsubsection{Ejercicio 3}
-	%\input{./Ejercicios/Relacion1.1/Rel_1.1_ej3.tex}
-	%\subsubsection{Ejercicio 4}
-	%\input{./Ejercicios/Relacion1.1/Rel_1.1_ej4.tex}
+	\subsection{Esquema para los tres primeros ejercicios}
+	\input{./Ejercicios/Relacion1.1/esquema1-2-3.tex}
+	\subsubsection{Ejercicio 1}
+	\input{./Ejercicios/Relacion1.1/Rel_1.1_ej1.tex}
+	\subsubsection{Ejercicio 2}
+	\input{./Ejercicios/Relacion1.1/Rel_1.1_ej2.tex}
+	\subsubsection{Ejercicio 3}
+	\input{./Ejercicios/Relacion1.1/Rel_1.1_ej3.tex}
+	\subsubsection{Ejercicio 4}
+	\input{./Ejercicios/Relacion1.1/Rel_1.1_ej4.tex}
 	%\subsubsection{Ejercicio 5}
 	%\input{./Ejercicios/Relacion1.1/Rel_1.1_ej5.tex}
 	%\subsubsection{Ejercicio 6}	
