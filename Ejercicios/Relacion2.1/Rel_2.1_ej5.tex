@@ -1,29 +1,23 @@
 \enunciado{Probar que M es la mayor $\sigma$ -\'algebra que contiene los intervalos acotados y sobre la que $\lambda ^*$ es aditiva.}
 
-
-
+Al estar hablando de intervalos $\Omega = \mathbb{R}$
 Supongamos que existe otra $\sigma$ -\'algebra $N$ que contiene los intervalos acotados y sobre la que $\lambda ^*$ es aditiva. Terminaremos demostrando que en ese caso $N \subseteq M$.
 
 Recordemos que $M=\{B \cup Z : B\in \mathfrak{B}, \lambda ^*(Z)=0\} \subseteq C_{\mathbb{R},\lambda }$
 
-La $\sigma$-subaditividad nos decía:
-\[\lambda ^*(A\cup B) \leq \lambda ^* (A)+ \lambda ^*(B)\]
-
 Llamaremos $\lambda '=\lambda	^* / N$
 
-Por ser una $\sigma$-\'algebra $\Omega \in N$, al estar hablando de intervalos $\Omega = \mathbb{R}$
-
-Sea $E\subseteq \mathbb{R}$, cogemos un conjunto arbitrario $A\subseteq \mathbb{R}$.
+Cogemos un conjunto arbitrario $A\subseteq \mathbb{R}$.
 Sabemos, en virtud de la propiedad de regularidad de la medida exterior (Prop. 2.1.10), que existe un boreliano $B$
 
 \[ B:A\subseteq B, \lambda '(A)=\lambda '(B) \]
 
-$\lambda '(A)=\lambda '(B)$,  usando la propiedad de que $N$ contiene los intervalos acotados podemos usar la $\sigma-$aditividad. 
-$B\cap E, B\cap E^c \in N$ 
+Usando la propiedad de que $N$ contiene los intervalos acotados podemos usar la $\sigma-$aditividad. Sea $E\subseteq \mathbb{R}$ perteneciente a los intervalos acotados. Vemos que $B\cap E, B\cap E^c \in N$ 
 
 $\lambda '(B) = \lambda'\left( (B\cap E) \cup (B\cap E^c) \right) $
 $\geqslant\lambda '(A\cap E) + \lambda'(A\cap E^c) \geqslant \lambda '(A)$
 
-Por tanto $E \in C_{\mathbb{R},\lambda '}$ lo que es equivalente a $E \in M$
+Por tanto $E \in C_{\mathbb{R},\lambda '}$ lo que es equivalente (cuando $\Omega = \mathbb{R}^N con N\in\mathbb{N}$) a: $E \in M$
+
 $\implies N \subseteq M$
  

@@ -1,1 +1,25 @@
- 
+\enunciado{
+Pruébese que la función $\frac{sen(x)}{x}$ es integrable en el intervalo $[0,1]$ y que
+$$\int_{0}^{1}\frac{sen(x)}{x}dx = \sum_{n=0}^{\infty}\frac{(-1)^n}{(2n+1)(2n+1)!}$$}
+
+
+Sabemos que el límite de la función en la abscisa $x=0$ es 1, por L'Hôpital. También podemos sacar que $\frac{sen(x)}{x}$ es una función decreciente en ese intervalo si estudiamos las derivadas, y además positiva, porque los dos términos lo son. Por lo tanto, sabemos que esta función esta acotada por 1 en el intervalo $[0,1]$. Siendo una función continua, concluimos que es integrable.
+
+La idea de la igualdad va a ser aplicar el Teorema de la convergencia absoluta. Definiremos la sucesión de funciones $f_n$ como la expresión por el desarrollo de Taylor del $sen(x)$, transformándolo para obtener una expresión de $\frac{sen(x)}{x}$:
+$$sen(x) =\sum_{n=0}^{\infty}\frac{(-1)^n}{(2n+1)!}x^{2n+1} \hspace{0.5cm} \forall x \in (0,1) \Rightarrow \frac{sen(x)}{x} =\sum_{n=0}^{\infty}\frac{(-1)^n}{(2n+1)!}x^{2n}\hspace{.5cm} \forall x \in (0,1) $$
+
+La igualdad se da en el intervalo abierto, pero como se distingue del cerrado en un conjunto numerable de puntos, podemos estudiar la integral en este intervalo, que será la misma.
+Definimos entonces $f_n : (0,1) \rightarrow \mathds{R}$:
+
+$$f_n(x) = \frac{(-1)^n}{(2n+1)!}x^{2n}$$
+
+Estas funciones son continuas, crecientes, conforman una serie de potencias y nos permiten bastante libertad para operar con ellas. Para usar el Teorema de la convergencia absoluta, vamos a probar que la suma del valor absoluto de las integrales de las $f_n$ en $(0,1)$ está acotada:
+
+$$\sum_{n=0}^{\infty}\int_{0}^{1}|f_n(x)|dx = \sum_{n=0}^{\infty}\int_{0}^{1}\frac{1}{(2n+1)!}x^{2n}dx \leq \sum_{n=0}^{\infty}\int_{0}^{1}\frac{1}{(2n+1)!}dx = \sum_{n=0}^{\infty}\frac{1}{(2n+1)!} \leq \sum_{n=0}^{\infty}\frac{1}{(n+1)^2}$$
+
+Y como esta última serie converge, sabemos que la primera también lo hace. Aplicando entonces el teorema, tenemos que:
+
+$$\int_{0}^{1}\left(\sum_{n=0}^{\infty}f_n(x)\right)dx = \sum_{n=0}^{\infty}\left(\int_{0}^{1}f_n(x) dx\right)$$
+
+Sustituimos $\frac{sen(x)}{x}$ con la sumatoria, usando la igualdad antes mencionada. Además, la integral de la serie de potencias de la derecha podemos hacerla por Riemann, o usando la regla de Barrow (que aparece en el siguiente tema), hallamos fácilmente la integral de cada $f_n$ en $(0,1)$, sabiendo que la función cuya derivada es $f_n$ es $\frac{(-1)^n}{(2n+1)(2n+1)!}x^{2n+1}$:
+$$\int_{0}^{1}\frac{sen(x)}{x}dx = \sum_{n=0}^{\infty}\left(\int_{0}^{1}f_n(x) dx\right) =\sum_{n=0}^{\infty}\frac{(-1)^n}{(2n+1)(2n+1)!} $$

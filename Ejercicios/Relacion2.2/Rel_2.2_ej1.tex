@@ -1,1 +1,79 @@
- 
+\enunciado{Sean $(\Omega, \mathcal{A})$ un espacio medible y sea $E\in\mathcal{A}$.} 
+
+\textit{a)} 
+Si $f:\Omega \rightarrow \mathbb{R}$ es una función medible entonces $f|_E$ es una función medible cuando se considera el espacio medible $(E,\mathcal{A}_E)$.
+
+$$\mathcal{A}_E = \{ A\cap E: A\in\mathcal{A} \}$$
+$f$ medible $\implies f^{-1}(B)\in\mathcal{A} \hspace{1cm} \forall B \in \mathbb{B}$ 
+
+$E\subseteq\Omega \implies f^{-1}_E(B)= f^{-1}(B)\cap E \in \mathcal{A}_E \hspace{1cm} \forall B\in\mathcal{B}$
+$\implies f|_E$ es medible en $(E, \mathcal{A}_E)$
+
+\ 
+
+\textit{b)} Sea $f:E\rightarrow\mathbb{R}$ una función. Probar que $f$ es medible si, y sólo si, la función $f_{\mathcal{X} E}:\Omega\rightarrow\mathbb{R}$, definida por
+\[ f_{\mathcal{X} E}(x) = \left\{
+	\begin{matrix}
+		f(x)			& \mbox{si } x\in E
+		\\0			& \mbox{si } x\not\in E
+	\end{matrix} \right.
+\]
+es medible. Además si $\Omega = \mathbb{R}^N$ entonces
+\[ \int_Efd\lambda = \int_{\mathbb{R}^N} f \mathcal{X}E d\lambda\]
+
+$\Longleftarrow (f_{\mathcal{X}E} \ medible \implies f \ medible)$
+
+Por el apartado anterior $f_{\mathcal{X}E}|_E = f$ es medible.
+
+$\vspace{0.5cm}$
+$\Longrightarrow (f\ medible \implies f_{\mathcal{X}E} \ medible)$
+
+\[ f^{-1}_{\mathcal{X}E}(B) = \left\{
+	\begin{matrix}
+		f^{-1}(B)\cap E & \mbox{si } 0\not\in B
+		\\ E^c\cup ( f^{-1}(B)\cap E ) & \mbox{si } 0\in B 
+	\end{matrix} \right.	
+\] 
+Por las propiedades de las $\sigma$-álgebra y los espacios medibles:
+
+$f^{-1}(B)\cap E \in \mathcal{A}$ y $E^c\cup ( f^{-1}(B)\cap E )\in \mathcal{A} \implies f^{-1}_{\mathcal{X}E}(B) \in \mathcal{A}$
+
+\
+
+Como $\Omega = \mathbb{R}^N$
+
+$\int_{\mathbb{R}^N}f_{\mathcal{X}E}d\lambda  = \int_Efd\lambda + \int_{E^c}0d\lambda$
+$= \int_Efd\lambda + \lambda(R(0)) = \int_Efd\lambda$
+
+\
+
+\textit{c)} Sea $f:E\rightarrow\mathbb{R}$ una función medible. Probar que $f$ es integrable en $E$ si, y sólo si, $f_{\mathcal{X}E}$ es integrable en $\mathbb{R}^N$
+
+Probando que $|f|_{\mathcal{X}E} = |f_{\mathcal{X}E}|$ por el apartado anterior sabemos que $\int|f|d\lambda = \int|f_{\mathcal{X}E}|d\lambda	$
+
+\[ |f|_{\mathcal{X}E}(x) = \left\{
+	\begin{matrix}
+		|f(x)|	 & \mbox{si } x\in E
+		\\	0	 & \mbox{si } x\not\in E	
+	\end{matrix} \right.
+	= \left\{
+	\begin{matrix}
+		f(x) 	& \mbox{si } f(x)>0
+		\\-f(x) & \mbox{si } f(x)<0
+		\\ 0		& \mbox{si } x\not\in E \mbox{ ó } f(x)=0
+	\end{matrix} \right.
+\]
+
+\[ |f_{\mathcal{X}E}(x)| = \left\{
+	\begin{matrix}
+		f_{\mathcal{X}E}(x)  & \mbox{si } f_{\mathcal{X}E}>0
+		\\ -f_{\mathcal{X}E}(x)  & \mbox{si } f_{\mathcal{X}E}<0
+		\\ 0  & \mbox{si } f_{\mathcal{X}E}=0
+	\end{matrix} \right.
+	= \left\{
+	\begin{matrix}
+		f(x) 	& \mbox{si } f(x)>0
+		\\-f(x) & \mbox{si } f(x)<0
+		\\ 0		& \mbox{si } x\not\in E \mbox{ ó } f(x)=0
+	\end{matrix} \right.
+\]
