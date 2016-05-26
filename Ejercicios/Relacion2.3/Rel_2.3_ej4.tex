@@ -1,1 +1,43 @@
- 
+\enunciado{ Caclular $lim\int f_n$ para cada una de las siguientes sucesiones $\{ f_n \}$ de funciones
+de $]0, 1[$ en $\R$:}
+
+\[ f_n = \frac{nx}{1 + n^2x^2}         \hspace{1cm}
+f_n = \frac{1}{n}log(x+n)e^{-x}cos(x)  \hspace{1cm}
+f_n = \frac{1+nx}{(1+x)^n}
+\]
+
+{\ }
+
+\textit{a)} $f_n = \frac{nx}{1 + n^2x^2} $
+\[ (nx+1)^2 \geq 0 \implies n^2x^2 + 1 \geq 0 \implies nx/(1+n^2x^2) \leq \frac{1}{2}
+\]
+Hemos probado que existe una función, en concreto la constantemente igual a $1/2$ integrable en $]0, 1[$ tal que $|f_n| \leq 1/2$.
+\[ \{ f_n(x) \} \rightarrow f=0 \hspace{0.5cm} \forall x \in ]0, 1[
+\]
+Por tanto estamos en condiciones de aplicar el teorema de la convergencia dominada
+\[ lim\int_{]0, 1[} f_n = \int_{]0, 1[} f = \int_{[0, 1]} 0 = 0
+\]
+
+{\ }
+
+\textit{b)} $f_n = \frac{1}{n}log(x+n)e^{-x}cos(x) $
+\[ |f_n(x)| \leq \left| \frac{log(x+n)e^{-x}}{n} \right|
+\]
+Como $log(x) \leq x \ \forall x \in \R^+$
+\[ \left| \frac{log(x+n)e^{-x}}{n} \right| \leq \frac{(x+n)e^{-x}}{n} =
+	\left( \frac{x}{n} + 1 \right)e^{-x} \leq (x+1)e^{-x} \leq 1
+\]
+Sabemos que $\{f_n(x)\} \rightarrow 0 \ \forall x\in]0, 1[$, tenemos una sucesión de funciones 
+integrables en $]0, 1[$ acotadas en valor absoluto por la función constantemente igual a $1$, integrable en $]0, 1[$, estamos en conficiones de aplicar el teoream de la convergencia dominada.
+\[ lim \int_{]0, 1[} f_n = \int_{]0, 1[} 0 = 0
+\]
+
+% $0 \leq \left| \int_Ef - \int_Ef_n \right| \leq \left| \int_Ef-f_n \right| \leq \int_E \left| f-f_n \right|$ % Lo tenía apuntado, creo que no aporta nada.
+
+{\ }
+
+\textit{c)} $f_n = \frac{1+nx}{(1+x)^n}$
+
+Como $1+nx \leq (1+x)^n$, entonces $|f_n(x)| \leq 1$, aplicamos de nuevo teorema de la convergencia dominada.
+\[ \left\{ \frac{1+nx}{(1+x)^n} \right\} \rightarrow 0\ \implies \ lim\int_{]0, 1[} f_n = \int_{]0, 1[} 0 = 0
+\]

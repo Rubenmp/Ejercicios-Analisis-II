@@ -1,1 +1,38 @@
- 
+\enunciado{Considerar las siguientes sucesiones $\{f_n\}$ de funciones reales de variable real:}
+	\[f_n = \frac{1}{n}\mathcal{X}_{[-n, n]} \hspace{0.5cm} g_n = n^2\mathcal{X}_{[1/(n+1), 1/n]}\]
+
+
+Estudiar en cada caso la convergencia puntual y comparar $\int lim_{n \rightarrow \infty} f_n$
+y $lim_{n \rightarrow \infty} \int f_n$ 
+
+\textit{a)}  $f_n = \frac{1}{n}\mathcal{X}_{[-n, n]}$
+
+
+$|f_n(x)| \leq \frac{1}{n} \ \forall n\in\mathbb{N}$ por tanto $\{f_n\}$ converge uniformemente a $0$ en $\mathbb{R}$.
+
+$f_n$ es continua c.p.d. y acotada.
+\[ \forall n\in \mathbb{N} \hspace{0.5cm} \int_{\R} f_n = 
+	\int_{-\infty}^{-n} f_n + \int_{-n}^n f_n + \int_n^{+\infty} f_n = 0 + \int_{-n}^n f_n + 0
+\] 
+\[ \int_{\R} |f_n| \leq \int_{\R} \frac{1}{n} \mathcal{X}_{[-n, n]} = 
+	\frac{1}{n}\int_{\R} \mathcal{X}_{[-n, n]} = \frac{2n}{n} = 2
+\]
+\[lim_{n\rightarrow \infty} \int f_n = 2 \not = \int lim_{n\rightarrow \infty} f_n = \int 0 = 0\]
+
+{\ }
+
+\textit{b)} $g_n = n^2\mathcal{X}_{[1/(n+1), 1/n]}$
+
+\[\R = ]-\infty, 0[ \cup [0, 5[ \cup [5, +\infty[ \hspace{1cm}
+ \forall x\in \left[ \frac{1}{n+1}, \frac{1}{n} \right] \subseteq [0,5[ \hspace{0.5cm} 		
+ \{g_n(x)\}\rightarrow 0
+\]
+\[ x\in[0, 5[ \implies \exists n_o :  x\not\in [0, 5[ \hspace{0.5cm} \forall n\geq m
+\]
+\[ lim_{n\rightarrow\infty} g_n = 0 \implies \int_{\R} lim_{n\rightarrow\infty} g_n = 0
+\]
+Comprobamos ahora el límite de la integral
+\[ \forall n\in\N \int_{\R} n^2\mathcal{X}_{[\frac{1}{n+1}, \frac{1}{n}]} =
+	n^2 \int_{\R}\mathcal{X}_{[\frac{1}{n+1}, \frac{1}{n}]} = \frac{n}{n+1}
+\]
+Como $lim_{n\rightarrow\infty} \frac{n}{n+1} = 1$, entonces $lim_{n\rightarrow\infty}\int g_n = 1$

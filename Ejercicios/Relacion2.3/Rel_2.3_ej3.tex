@@ -1,1 +1,18 @@
- 
+\enunciado{Sea $E\subseteq \R ^n$ un conjunto medible de medida finita, y sea $\{f_n\}$ una sucesión de funciones medibles en $E$ que converge puntualmente a una función $f$. Supongmos que existe una constante $M\geq 0$ tal que $|\{ f_n \}| \leq M \ \forall n\in\N$. Probar que f es integrable y que
+\[ lim\int_E |f-f_n| = 0 \]
+Dar un ejemplo mostrando que la hipótesis de medida finita no puede ser suprimida. 
+} 
+
+Si $\lambda (E) < +\infty$
+\[ \int_E |f| \leq \int_E M = M\lambda (E) < +\infty\]
+y por definición $f$ es integrable.
+
+$\{f_n\}$ es una sucesión de funciones medibles que converge puntualmente a $f$ en $E$ y existe una función $g$ integrable en $E$ tal que $\{ |f_n| \}\leq g \ \forall x\in E$. 
+Podemos tomar como función $g$ la función constantemente igual a $M$, $g$ es integrable en $E$ ya que $\lambda (E)<+\infty$ (si quitamos la condición de medida finita $g$ no sería integrable).
+
+Por el teorema de la convergencia dominada
+\[ lim \int_E |f-f_n| = 0
+\]
+
+Si quitamos la condición $\lambda (E)<+\infty$ y cogemos $\{f_n\}$ sucesión de funciones tal que $f_n(x) = 1 \ \forall x \in E$, vemos que $f=lim_{n\rightarrow \infty} f_n$ es una función no integrable, ya que
+\[\int_Ef = \int_E1 = \lambda (E) = +\infty \not < +\infty \]

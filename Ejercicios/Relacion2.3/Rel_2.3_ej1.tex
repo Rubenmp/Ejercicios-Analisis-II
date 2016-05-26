@@ -1,1 +1,29 @@
+\enunciado{Sea $(\Omega, \mathcal{A})$ un espacio de medida, $\{f_n\}$ una sucesión de funciones medibles y $f,g$ dos funciones medibles. Porbar las siguientes afiirmaciones:}
+
+
+\textit{a)}
+	Si $\{f_n\}$ converge c.p.d. a $f$ y a $g$ c.p.d. entonces $f=g$ c.p.d. 
+
+Definimos
+\[A = \{ x\in\Omega / \{f_n(x)\} \rightarrow f(x) \} \hspace{0.5cm}
+  B = \{ x\in\Omega / \{f_n(x)\} \rightarrow g(x) \} \hspace{0.5cm}
+\]
+
+\[  D = \{ x\in\Omega / f(x) = g(x) \} 
+\]
+Sabemos por hipótesis que $\mu (A^c) = \mu (B^c) = 0$ y si $x\in (A\cap B) \implies f(x) = g(x)$.
+
+\[D^c \subseteq (A\cap B)^c = A^c \cup B^c \]
+Suponemos que $D^c$ es medible, por tanto
+$\mu (D^c) \leq \mu (A^c \cup B^c) \leq \mu(A^c) + \mu (B^c) = 0$
+
+Por tanto $\mu (D^c)=0$ y $f=g$ c.p.d. 
+
+{\ } 
  
+\textit{b)}
+	Si $\{f_n\}$ converge c.p.d. a $f$ y $f=g$ c.p.d. entonces $\{f_n\}$ converge c.p.d. a $g$.
+	
+Con los conjuntos anteriores sabemos que $\mu (A^c) = 0$, $\mu (D^c) = 0$ y en este caso
+\[Si \ x\in D, entonces \ x\in B \implies \mu (B^c) \leq \mu (D^c) = 0\]
+Por tanto $\{f_n\}$ converge c.p.d. a $g$.

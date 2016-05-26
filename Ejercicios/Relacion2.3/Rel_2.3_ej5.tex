@@ -1,1 +1,41 @@
- 
+\enunciado{ Sea $E\subseteq \R^n$ un conjunto medible de medida finita y sea $\{ f_n \}$ una sucesión de funciones integrables en $E$ que converge uniformemente a una función $f$. Probar que $f$ es integrable y que
+\[ lim \int_E|f-f_n| = 0
+\]
+Dar un ejemplo mostrando que la hipótesis de medida finita no puede ser suprimida.
+} 
+
+\[ f_n \mbox{ converge uniformemente a } f \mbox{ en E y } \lambda (E) < +\infty
+\]
+\[ \forall \epsilon > 0 \ \exists n_O > 0: n\geq n_0 \ |f(x)-f_n(x)| < \epsilon
+\]
+\[ f_n(x) - \epsilon \geq f(x) \geq f_n(x) + \epsilon \ \implies \ 
+  | f_n(x | \leq | f_n(x) + \epsilon |
+\]
+Fijando $\epsilon = 1$
+\[ \int_E |f(x)dx| \leq \int_E |f_n(x)+1|dx \leq 
+   \int_E |f_n(x)|dx + \int_E1dx < +\infty
+\]
+vemos entonces que $f(x) \ \forall x\in E$ es integrable, y al haber fijado 
+$\epsilon , |f(x)-f_n(x)| < 1$ y por el teorema de la convergencia dominada
+\[ lim_{n \rightarrow \infty} \int_E |f-f_n| = 0
+\]  
+
+{\ }
+
+La hipótesis de medida finita es necesaria:
+
+Definamos en su caso el conjunto $E=\R$, con $f_n = \mathcal{X}_{]0,n]}$ 
+% Tenía que era cerrado por la izquierda... (?)
+$\{f_n\}$ es una sucesión de funciones integrables, ya que
+\[ \int_{\R^+} \frac{1}{n} \mathcal{X}_{]0, n]} = 
+   \frac{1}{n} \int_{\R^+} \mathcal{X}_{]0, n]} = \frac{n}{n} = 1 < +\infty
+\] 
+Sin embargo la función límite no es integrable
+\[ f(x) = \left\{
+		  \begin{matrix} 
+    		      \frac{1}{x} & \mbox{ si }x\in ]0,n[
+	          \\ 0        & \mbox{ si } x\not\in ]0, n[      	  
+		  \end{matrix} 
+		  \right. 
+\]
+
