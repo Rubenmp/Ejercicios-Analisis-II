@@ -1,1 +1,27 @@
- 
+\enunciado{ Para cada natural $n$, y para cada $x\in\R$, sea $f_n = a_nsen(nx) + b_ncos(nx)$, donde $\{a_n\}$ y $\{b_n\}$ son dos sucesiones de númros reales. Pruébese que si la sucesión $\{f_n\}$ converge c.p.d. a uno en $[0, 2\pi]$ entonces la sucesión $\{|a_n| + |b_n|\}$ no está acotada.}
+
+La hipótesis inicial es la convergencia c.p.d. a $1$ de $\{f_n\}$, supongamos que en ese caso $\{|a_n| + |b_n|\}$ está acotada:
+\[\exists M>0, |f_n| \leq |a_n| + |b_n| \leq M \forall x\in [0, 2\pi] \]
+$|f_n|$ está acotada por un número $M>0$, como la función constantemente igual a $M$ en $[0, 2\pi]$
+es integrable, podemos aplicar el teorema de la convergencia dominada.
+\[ lim_{n\to\infty}\int_{[0, 2\pi]} f_n(x)dx = \int_{[0, 2\pi]} lim_{n\to\infty} f_n(x)dx
+\]
+$ \int_{[0, 2\pi]} lim_{n\to\infty} f_n(x)dx = \int_{[0, 2\pi]} 1dx = 2\pi - 0 = 2\pi $
+
+\begin{equation*}
+\begin{split}
+lim_{n\to\infty} \left( \int_[0, 2\pi] f_n(x)dx \right)
+  & = lim_{n\to\infty} \left( \int_{0, 2\pi} a_nsen(nx)dx + \int_{0, 2\pi} b_ncos(nx)dx \right)
+\\& = lim_{n\to\infty} \left( a_n\int_{0, 2\pi} sen(nx)dx + b_n\int_{0, 2\pi} cos(nx)dx \right)
+\\& = lim_{n\to\infty} \left( -a_n \left[ \frac{cos(nx)}{n} \right]_0^{[2\pi]} 
+					   + b_n \left[ \frac{sen(nx)}{n} \right]_0^{[2\pi]} \right)
+\\& = lim_{n\to\infty} \frac{-a_n}{n} = 0
+\end{split}
+\end{equation*}
+  
+En resumen
+\[ \int_{[0, 2\pi]} lim_{n\to\infty} f_n(x)dx = 2\pi \not =
+	lim_{n\to\infty} \left( \int_[0, 2\pi] f_n(x)dx \right) = 0
+\]
+Por tanto la suposición de que $\{|a_n| + |b_n|\}$ estaba acotada es falsa.
+  

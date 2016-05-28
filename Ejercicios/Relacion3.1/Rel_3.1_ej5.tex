@@ -1,1 +1,140 @@
- 
+\enunciado{ Justificar, haciendo uso en cada caso de un conveniente teorema de convergencia, las siguientes igualdades:}
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+\textit{d)} $\int_0^{+\infty} \frac{x}{1+e^x}dx = \sum_{n=1}^{\infty} \frac{(-1)^{n+1}}{n^2}$
+
+Expresamos la función inicial de la siguiente forma
+\[ \frac{x}{e^x} \left( \frac{1}{1+e^{-x}} \right)\]
+Lo expresamos así para poner la segunda parte como una suma infinita de los términos de una progresión geométrica. Esta expresión es válida cuando 
+$|-e^{-x}| < 1 \Leftrightarrow x \in ]0, +\infty$, como los puntos de $[0, +\infty]$ donde no se puede expresar la función de esa forma son numerables (solamente falla en el $0$) la integral será la misma.
+
+\[ \frac{x}{e^x} \sum_{n=0}^{+\infty} (-1)^{n+1}e^{-nx} = x \sum_{n=1}^{+\infty} (-1)^{n+1}e^{-nx}
+\]
+Comprobamos que podemos usar el teorema de la convergencia absoluta (*).   
+\[ \sum_{n=1}^{\infty} \int_0^{+\infty} \left| (-1)^{n+1}xe^{-nx} \right| dx
+= \sum_{n=1}^{\infty} \int_0^{+\infty} xe^{-nx} dx
+\]
+
+Integramos por partes 
+\[ \int_0^{+\infty} xe^{-nx}dx \hspace{1cm}
+	\begin{bmatrix}
+	f  = x    &  dg = e^{-nx}dx \\
+	df = dx   &   g = \frac{e^{-nx}}{-n}
+	\end{bmatrix}
+\]
+Cambio de variable
+\[ -\frac{xe^{-nx}}{n} + \frac{1}{n} \int_0^{+\infty}e^{-nx}dx \hspace{1cm} 
+	\begin{bmatrix}
+	u = -nx   \\
+	du = -ndx 
+	\end{bmatrix}
+\]
+\[ -\frac{xe^{-nx}}{n} + \frac{1}{n^2} \int_0^{+\infty}e^udx 
+=  \left[ -\frac{e^{-nx}(nx+1)}{n^2} \right]_0^{+\infty} 
+= \frac{1}{n^2}
+\]
+Como $\sum_{n=0}^{+\infty} \frac{1}{n^2}$ converge podemos intercambiar el sumatorio con la integral.
+
+\[ \int_0^{+\infty} \frac{x}{1+e^x}dx 
+ = \int_0^{+\infty} \sum_{n=1}^{+\infty} (-1)^{n+1}xe^{-nx}   dx
+ =^{(*)} \sum_{n=1}^{+\infty} (-1)^{n+1}  \int_0^{+\infty} xe^{-nx} dx
+ = \sum_{n=1}^{+\infty} \frac{(-1)^{n+1}}{n^2}
+\]
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%
+
+\textit{e)} $\int_0^{+\infty} \frac{e^{-ax}}{1+e^{-bx}}dx = \sum_{n=0}^{+\infty} \frac{(-1)^n}{a+nb}$
+$(a,b>0)$ y deducir que 
+\[ \sum_{n=0}^{+\infty} \frac{(-1)^n}{2n+1} = \frac{\pi}{4} \hspace{0.5cm}
+   \sum_{n=0}^{+\infty} \frac{(-1)^n}{n+1}  = ln(2) 
+\]
+
+Empecemos expresando el integrando como una constante y la suma infinita de una progresión geométrica.
+Como el en caso anterior esta expresión es válida $\forall x\in ]0, +\infty[$, al diferenciarse con
+la original en un número finito de puntos las integrales son iguales.
+\[ \frac{e^{-ax}}{1+e^{-bx}}
+ = e^{-ax}\frac{1}{1+e^{-bx}}
+ = e^{-ax} -\sum_{n=0}^{+\infty} (-e^{-bx})^n
+ = -\sum_{n=0}^{+\infty} (-1)^n e^{-ax-bnx}
+\]
+
+¿Podemos usar el teorema de la convergencia absoluta?
+\[ \sum_{n=0}^{+\infty} \int_0^{+\infty} | (-1)^ne^{-ax-bnx} |
+ = \sum_{n=0}^{+\infty} \int_0^{+\infty} e^{-ax-bnx}
+ = -\sum_{n=0}^{+\infty} \left[ \frac{e^{-ax-bnx}}{a+bn} \right]_0^{+\infty} 
+ = -\sum_{n=0}^{+\infty} \frac{1}{a+bn}
+\]
+
+Como el sumatorio anterior diverge no podemos usar el teorema de la convergencia absoluta, probemos
+con el teorema de la convergencia dominada.
+
+Definimos nuestra sucesión de funciones integrables $f_n(x) = \sum_{i=0}^{n} \frac{(-1)^i}{e^{ax+bix}}$.
+Es claro que
+\[ \{f_n(x)\} \to \sum_{i=0}^{+\infty} \frac{(-1)^i}{e^{ax+bix}}
+\]
+
+
+
+Vamos a intentar acotar los elementos de la sucesión en valor absoluto
+\[ |f_n(s)| \leq \sum_{i=0}^{E(n)} \frac{(-1)^i}{e^{ax+bix}} \hspace{1cm} \forall n,x\in\R
+\]
+
+
+
+
+
+
+
+\textbf{Deducciones}
+
+- Caso $a=1m¡,b=2$
+\[ \sum_{n=0}^{+\infty} \frac{(-1)^n}{1+2n}
+ = \int_0^{+\infty} \frac{e^{-x}}{1+e^{-2x}}dx \hspace{1cm}
+	\begin{bmatrix}
+	u  = e^x  \\
+	du = e^x dx
+	\end{bmatrix}
+\]
+\[ = \int_0^{+\infty} \frac{1}{\left( \frac{1}{u^2} +1 \right) u^2}du 
+   = \int_0^{+\infty} \frac{1}{1+s^2} ds
+    \hspace{1cm}
+	\begin{bmatrix}
+	s  = \frac{1}{u} \\
+	ds = -\frac{1}{u^2}du	
+	\end{bmatrix}
+\]
+Integramos y deshacemos los cambios de variable
+\[ -tan^{-1}(s) \hspace{0.5cm} -tan^{-1}\left( \frac{1}{u}\right) \hspace{0.5cm}
+   -tan^{-1} (e^{-x})
+\]
+Por tanto
+\[ \int_0^{+\infty} \frac{e^{-x}}{1+e^{-2x}}dx
+ = \left[ -tan^{-1} (e^{-x}) \right]
+ = -(0-\frac{\pi}{4}) = 	\frac{\pi}{4}
+\]
+
+
+- Caso $a=b=1$
+\[ \sum_{n=0}^{+\infty} \frac{(-1)^n}{n+1} 
+ = \int_0^{+\infty} \frac{e^{-x}}{1+e^{-x}} dx \hspace{1cm}
+	\begin{bmatrix}
+	u  = -x \\
+	du = -dx
+	\end{bmatrix}
+\]
+\[ = - \int_0^{+\infty} \frac{e^u}{1+e^u} du 
+   = - \int_0^{+\infty} \frac{ds}{s} \hspace{1cm}
+	\begin{bmatrix}
+	s = e^u + 1 \\
+	ds = e^u du
+	\end{bmatrix}
+\]
+Hacemos los correspondientes cambios de variable
+\[ -ln(s) \hspace{0.5cm} -ln(e^u+1) \hspace{0.5cm} -ln(e^{-x}+1)
+\]
+\[ \int_0^{+\infty} \frac{e^{-x}}{1+e^{-x}} dx 
+ = \left[ -ln(e^{-x}+1) \right]_0^{+\infty} = -ln(2)
+\]

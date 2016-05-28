@@ -3,9 +3,25 @@
 \[ \int_0^1e^{x^2}dx = \sum_{n=0}^{\infty} \frac{1}{(2n+1)n!}
 \]} 
 
-Definimos $f(y)=e^y:\mathbb{R}\rightarrow\mathbb{R} \hspace{1cm} f\in C^{\infty}(\mathbb{R})$
+\[ \int_0^1|e^{x^2}| \leq \int_0^1e = e < +\infty
+\]
+Por tanto $e^{x^2}$ es integrable en $[0, 1]$. Definimos $f(y)=e^y:\mathbb{R}\rightarrow\mathbb{R} \hspace{1cm} f\in C^{\infty}(\mathbb{R})$
 
 Desarrollo en serie de Taylor con $a=0$
 \[ e^y = \sum_{n=0}^{\infty} \frac{f^{n)}(a)}{n!}(y-a)^n=
 \sum_{n=0}^{\infty} \frac{y^n}{n!}
 \] y por tanto $e^{x^2}$ se puede expresar como $\sum_{n=0}^{\infty} \frac{x^{2n}}{n!}$
+
+Comprobamos que podemos utilizar el teorema de la convergencia absoluta (*).
+\[   \sum_{n=0}^{\infty} \int_0^1 \left| \frac{x^{2n}}{n!} \right| dx
+ =   \sum_{n=0}^{\infty} \frac{1}{n!} \left[ \frac{x^{2n+1}}{2n+1} \right]_0^1
+ =   \sum_{n=0}^{\infty} \frac{1}{(2n+1) n!} 
+\leq \sum_{n=0}^{\infty} \frac{1}{2n^2} < +\infty
+\]
+Por tanto
+\[ \int_0^1 e^{x^2} dx
+ = \int_0^1 \sum_{n=0}^{\infty} \left| \frac{x^{2n}}{n!} \right| dx
+ = \int_0^1 \sum_{n=0}^{\infty} \frac{x^{2n}}{n!} dx
+ =^{(*)} \sum_{n=0}^{\infty} \int_0^1 \frac{x^{2n}}{n!} dx
+ = \sum_{n=0}^{\infty} \frac{1}{(2n+1) n!}
+\]
