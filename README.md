@@ -2,7 +2,7 @@
 
 Asignatura del grado en Matemáticas en la Universidad de Granada (UGR).
 
-## Compilar
+## Generar pdf
 Requiere pdflatex:
 ```shell
 make
