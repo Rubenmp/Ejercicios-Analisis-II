@@ -10,7 +10,10 @@ make
 ## Añadir ejercicios
 Para identificar los commits podemos indicar expresamente el ejercicio que hemos modificado
 
+```shell
 git commit -m "Relación x.x ejercicio x"
+```
 
 Si el ejercicio no ha sido corregido por el profesor se debe especificar con un % (\%) antes del número de ejercicio.
+
 Ej: %5. Probad ...
